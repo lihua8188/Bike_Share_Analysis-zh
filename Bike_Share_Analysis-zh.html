@@ -11822,7 +11822,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 导入所有必要的包和函数。</span>
@@ -11839,7 +11839,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_first_point</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
@@ -11858,7 +11858,7 @@ div#notebook {
         <span class="c1">## 待办：对 DictReader 对象使用函数     ##</span>
         <span class="c1">## 从而读取数据文件的第一条骑行记录并将其存储为一个变量     ##</span>
         <span class="c1">## 见 https://docs.python.org/3/library/csv.html#reader-objects ##</span>
-        <span class="n">first_trip</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">trip_reader</span><span class="o">.</span><span class="fm">__next__</span><span class="p">())</span>
+        <span class="n">first_trip</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">trip_reader</span><span class="p">)</span>
         
         <span class="c1">## 待办：用 pprint 库来输出第一条骑行记录。 ##</span>
         <span class="c1">## 见 https://docs.python.org/3/library/pprint.html s    ##</span>
@@ -11895,46 +11895,46 @@ div#notebook {
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
 City: NYC
-{&#39;bikeid&#39;: &#39;17109&#39;,
- &#39;birth year&#39;: &#39;&#39;,
- &#39;end station id&#39;: &#39;401&#39;,
- &#39;end station latitude&#39;: &#39;40.72019576&#39;,
- &#39;end station longitude&#39;: &#39;-73.98997825&#39;,
- &#39;end station name&#39;: &#39;Allen St &amp; Rivington St&#39;,
- &#39;gender&#39;: &#39;0&#39;,
- &#39;start station id&#39;: &#39;532&#39;,
- &#39;start station latitude&#39;: &#39;40.710451&#39;,
- &#39;start station longitude&#39;: &#39;-73.960876&#39;,
- &#39;start station name&#39;: &#39;S 5 Pl &amp; S 4 St&#39;,
- &#39;starttime&#39;: &#39;1/1/2016 00:09:55&#39;,
- &#39;stoptime&#39;: &#39;1/1/2016 00:23:54&#39;,
- &#39;tripduration&#39;: &#39;839&#39;,
- &#39;usertype&#39;: &#39;Customer&#39;}
+OrderedDict([(&#39;tripduration&#39;, &#39;839&#39;),
+             (&#39;starttime&#39;, &#39;1/1/2016 00:09:55&#39;),
+             (&#39;stoptime&#39;, &#39;1/1/2016 00:23:54&#39;),
+             (&#39;start station id&#39;, &#39;532&#39;),
+             (&#39;start station name&#39;, &#39;S 5 Pl &amp; S 4 St&#39;),
+             (&#39;start station latitude&#39;, &#39;40.710451&#39;),
+             (&#39;start station longitude&#39;, &#39;-73.960876&#39;),
+             (&#39;end station id&#39;, &#39;401&#39;),
+             (&#39;end station name&#39;, &#39;Allen St &amp; Rivington St&#39;),
+             (&#39;end station latitude&#39;, &#39;40.72019576&#39;),
+             (&#39;end station longitude&#39;, &#39;-73.98997825&#39;),
+             (&#39;bikeid&#39;, &#39;17109&#39;),
+             (&#39;usertype&#39;, &#39;Customer&#39;),
+             (&#39;birth year&#39;, &#39;&#39;),
+             (&#39;gender&#39;, &#39;0&#39;)])
 
 City: Chicago
-{&#39;bikeid&#39;: &#39;2295&#39;,
- &#39;birthyear&#39;: &#39;1990&#39;,
- &#39;from_station_id&#39;: &#39;156&#39;,
- &#39;from_station_name&#39;: &#39;Clark St &amp; Wellington Ave&#39;,
- &#39;gender&#39;: &#39;Male&#39;,
- &#39;starttime&#39;: &#39;3/31/2016 23:30&#39;,
- &#39;stoptime&#39;: &#39;3/31/2016 23:46&#39;,
- &#39;to_station_id&#39;: &#39;166&#39;,
- &#39;to_station_name&#39;: &#39;Ashland Ave &amp; Wrightwood Ave&#39;,
- &#39;trip_id&#39;: &#39;9080545&#39;,
- &#39;tripduration&#39;: &#39;926&#39;,
- &#39;usertype&#39;: &#39;Subscriber&#39;}
+OrderedDict([(&#39;trip_id&#39;, &#39;9080545&#39;),
+             (&#39;starttime&#39;, &#39;3/31/2016 23:30&#39;),
+             (&#39;stoptime&#39;, &#39;3/31/2016 23:46&#39;),
+             (&#39;bikeid&#39;, &#39;2295&#39;),
+             (&#39;tripduration&#39;, &#39;926&#39;),
+             (&#39;from_station_id&#39;, &#39;156&#39;),
+             (&#39;from_station_name&#39;, &#39;Clark St &amp; Wellington Ave&#39;),
+             (&#39;to_station_id&#39;, &#39;166&#39;),
+             (&#39;to_station_name&#39;, &#39;Ashland Ave &amp; Wrightwood Ave&#39;),
+             (&#39;usertype&#39;, &#39;Subscriber&#39;),
+             (&#39;gender&#39;, &#39;Male&#39;),
+             (&#39;birthyear&#39;, &#39;1990&#39;)])
 
 City: Washington
-{&#39;Bike number&#39;: &#39;W20842&#39;,
- &#39;Duration (ms)&#39;: &#39;427387&#39;,
- &#39;End date&#39;: &#39;3/31/2016 23:04&#39;,
- &#39;End station&#39;: &#39;Georgia Ave and Fairmont St NW&#39;,
- &#39;End station number&#39;: &#39;31207&#39;,
- &#39;Member Type&#39;: &#39;Registered&#39;,
- &#39;Start date&#39;: &#39;3/31/2016 22:57&#39;,
- &#39;Start station&#39;: &#39;Park Rd &amp; Holmead Pl NW&#39;,
- &#39;Start station number&#39;: &#39;31602&#39;}
+OrderedDict([(&#39;Duration (ms)&#39;, &#39;427387&#39;),
+             (&#39;Start date&#39;, &#39;3/31/2016 22:57&#39;),
+             (&#39;End date&#39;, &#39;3/31/2016 23:04&#39;),
+             (&#39;Start station number&#39;, &#39;31602&#39;),
+             (&#39;Start station&#39;, &#39;Park Rd &amp; Holmead Pl NW&#39;),
+             (&#39;End station number&#39;, &#39;31207&#39;),
+             (&#39;End station&#39;, &#39;Georgia Ave and Fairmont St NW&#39;),
+             (&#39;Bike number&#39;, &#39;W20842&#39;),
+             (&#39;Member Type&#39;, &#39;Registered&#39;)])
 </pre>
 </div>
 </div>
@@ -11964,7 +11964,7 @@ City: Washington
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">duration_in_mins</span><span class="p">(</span><span class="n">datum</span><span class="p">,</span> <span class="n">city</span><span class="p">):</span>
@@ -11979,14 +11979,12 @@ City: Washington
 <span class="sd">    所以转换单位时，你需要用一个函数来将字符串转换为合适的数值类型。</span>
 <span class="sd">    见 https://docs.python.org/3/library/functions.html</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    
+
     <span class="c1"># 请在此处写出代码</span>
-    <span class="k">if</span> <span class="n">city</span> <span class="o">==</span> <span class="s1">&#39;Washington&#39;</span><span class="p">:</span>
-        <span class="n">duration</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">datum</span><span class="p">[</span><span class="s1">&#39;Duration (ms)&#39;</span><span class="p">])</span><span class="o">/</span><span class="mi">1000</span><span class="o">/</span><span class="mi">60</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">duration</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">datum</span><span class="p">[</span><span class="s1">&#39;tripduration&#39;</span><span class="p">])</span><span class="o">/</span><span class="mi">60</span>
+    <span class="n">time_convertion</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;NYC&#39;</span><span class="p">:</span><span class="mi">60</span><span class="p">,</span> <span class="s1">&#39;Chicago&#39;</span><span class="p">:</span><span class="mi">60</span><span class="p">,</span> <span class="s1">&#39;Washington&#39;</span><span class="p">:</span><span class="mi">60000</span><span class="p">}</span>
+    <span class="n">name_convertion</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;NYC&#39;</span><span class="p">:</span><span class="s1">&#39;tripduration&#39;</span><span class="p">,</span> <span class="s1">&#39;Chicago&#39;</span><span class="p">:</span><span class="s1">&#39;tripduration&#39;</span><span class="p">,</span> <span class="s1">&#39;Washington&#39;</span><span class="p">:</span><span class="s1">&#39;Duration (ms)&#39;</span><span class="p">}</span>  
     
-    <span class="k">return</span> <span class="n">duration</span>
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">datum</span><span class="p">[</span><span class="n">name_convertion</span><span class="p">[</span><span class="n">city</span><span class="p">]])</span><span class="o">/</span><span class="n">time_convertion</span><span class="p">[</span><span class="n">city</span><span class="p">]</span>
 
 
 <span class="c1"># 测试代码是否奏效，若所有断言都没问题，则不应有输出出现。</span>
@@ -12007,7 +12005,7 @@ City: Washington
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">time_of_trip</span><span class="p">(</span><span class="n">datum</span><span class="p">,</span> <span class="n">city</span><span class="p">):</span>
@@ -12024,12 +12022,9 @@ City: Washington
 <span class="sd">    &quot;&quot;&quot;</span>
     
     <span class="c1"># 请在此处写出代码</span>
-    <span class="k">if</span> <span class="n">city</span> <span class="o">==</span> <span class="s1">&#39;Washington&#39;</span><span class="p">:</span>
-        <span class="n">date</span> <span class="o">=</span> <span class="n">datum</span><span class="p">[</span><span class="s1">&#39;Start date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
-        <span class="n">time</span> <span class="o">=</span> <span class="n">datum</span><span class="p">[</span><span class="s1">&#39;Start date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">date</span> <span class="o">=</span> <span class="n">datum</span><span class="p">[</span><span class="s1">&#39;starttime&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
-        <span class="n">time</span> <span class="o">=</span> <span class="n">datum</span><span class="p">[</span><span class="s1">&#39;starttime&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">time_conversion</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Washington&#39;</span><span class="p">:</span> <span class="s1">&#39;Start date&#39;</span><span class="p">,</span> <span class="s1">&#39;NYC&#39;</span><span class="p">:</span> <span class="s1">&#39;starttime&#39;</span><span class="p">,</span> <span class="s1">&#39;Chicago&#39;</span><span class="p">:</span> <span class="s1">&#39;starttime&#39;</span><span class="p">}</span>
+    <span class="n">date</span> <span class="o">=</span> <span class="n">datum</span><span class="p">[</span><span class="n">time_conversion</span><span class="p">[</span><span class="n">city</span><span class="p">]]</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">time</span> <span class="o">=</span> <span class="n">datum</span><span class="p">[</span><span class="n">time_conversion</span><span class="p">[</span><span class="n">city</span><span class="p">]]</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span>
         
     <span class="n">month</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">date</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
     <span class="n">hour</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
@@ -12056,7 +12051,7 @@ City: Washington
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">type_of_user</span><span class="p">(</span><span class="n">datum</span><span class="p">,</span> <span class="n">city</span><span class="p">):</span>
@@ -12108,7 +12103,7 @@ City: Washington
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">condense_data</span><span class="p">(</span><span class="n">in_file</span><span class="p">,</span> <span class="n">out_file</span><span class="p">,</span> <span class="n">city</span><span class="p">):</span>
@@ -12159,7 +12154,7 @@ City: Washington
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 运行下框以测试效果</span>
@@ -12191,25 +12186,25 @@ City: Washington
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
 City: Washington
-{&#39;day_of_week&#39;: &#39;Thursday&#39;,
- &#39;duration&#39;: &#39;7.123116666666666&#39;,
- &#39;hour&#39;: &#39;22&#39;,
- &#39;month&#39;: &#39;3&#39;,
- &#39;user_type&#39;: &#39;Subscriber&#39;}
+OrderedDict([(&#39;duration&#39;, &#39;7.123116666666666&#39;),
+             (&#39;month&#39;, &#39;3&#39;),
+             (&#39;hour&#39;, &#39;22&#39;),
+             (&#39;day_of_week&#39;, &#39;Thursday&#39;),
+             (&#39;user_type&#39;, &#39;Subscriber&#39;)])
 
 City: Chicago
-{&#39;day_of_week&#39;: &#39;Thursday&#39;,
- &#39;duration&#39;: &#39;15.433333333333334&#39;,
- &#39;hour&#39;: &#39;23&#39;,
- &#39;month&#39;: &#39;3&#39;,
- &#39;user_type&#39;: &#39;Subscriber&#39;}
+OrderedDict([(&#39;duration&#39;, &#39;15.433333333333334&#39;),
+             (&#39;month&#39;, &#39;3&#39;),
+             (&#39;hour&#39;, &#39;23&#39;),
+             (&#39;day_of_week&#39;, &#39;Thursday&#39;),
+             (&#39;user_type&#39;, &#39;Subscriber&#39;)])
 
 City: NYC
-{&#39;day_of_week&#39;: &#39;Friday&#39;,
- &#39;duration&#39;: &#39;13.983333333333333&#39;,
- &#39;hour&#39;: &#39;0&#39;,
- &#39;month&#39;: &#39;1&#39;,
- &#39;user_type&#39;: &#39;Customer&#39;}
+OrderedDict([(&#39;duration&#39;, &#39;13.983333333333333&#39;),
+             (&#39;month&#39;, &#39;1&#39;),
+             (&#39;hour&#39;, &#39;0&#39;),
+             (&#39;day_of_week&#39;, &#39;Friday&#39;),
+             (&#39;user_type&#39;, &#39;Customer&#39;)])
 </pre>
 </div>
 </div>
@@ -12241,7 +12236,7 @@ City: NYC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">number_of_trips</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
@@ -12304,7 +12299,7 @@ City: NYC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 修改此框及上框，回答问题 4a。##</span>
@@ -12339,7 +12334,7 @@ City: NYC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 根据问题4a依次调取统计函数三个地区数据并打印结果</span>
@@ -12408,7 +12403,7 @@ City: NYC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 使用本框及新框来回答问题 4b。               ##</span>
@@ -12465,7 +12460,7 @@ NYC 的平均骑行时长是：15分钟, 骑行超过30分钟的比例是：7.3%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 使用本框及新框来回答问题 4c。##</span>
@@ -12517,7 +12512,7 @@ NYC 的会员平均骑行时长是: 13.7, 散客平均骑行时长是: 32.8
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 加载库</span>
@@ -12579,7 +12574,7 @@ NYC 的会员平均骑行时长是: 13.7, 散客平均骑行时长是: 32.8
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[82]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 使用本框及新框来收集所有骑行时长并制成列表。##</span>
@@ -12609,7 +12604,7 @@ NYC 的会员平均骑行时长是: 13.7, 散客平均骑行时长是: 32.8
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[98]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 绘制骑行时间直方图</span>
@@ -12670,7 +12665,7 @@ NYC 的会员平均骑行时长是: 13.7, 散客平均骑行时长是: 32.8
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[119]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 使用本框及新框来回答问题 5##</span>
@@ -12756,7 +12751,7 @@ NYC 的会员平均骑行时长是: 13.7, 散客平均骑行时长是: 32.8
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[124]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 使用本框及新框来继续探索数据集。 ##</span>
@@ -12786,7 +12781,7 @@ NYC 的会员平均骑行时长是: 13.7, 散客平均骑行时长是: 32.8
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[133]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 计算用户即散客各小时使用次数数据，绘制柱状图</span>
@@ -12881,7 +12876,7 @@ NYC 的会员平均骑行时长是: 13.7, 散客平均骑行时长是: 32.8
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[134]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">subprocess</span> <span class="k">import</span> <span class="n">call</span>
@@ -12898,7 +12893,7 @@ NYC 的会员平均骑行时长是: 13.7, 散客平均骑行时长是: 32.8
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[134]:</div>
+<div class="prompt output_prompt">Out[20]:</div>
 
 
 
